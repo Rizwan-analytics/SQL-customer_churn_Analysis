@@ -21,77 +21,83 @@ This dataset consists the following attributes
 
 ## SQL Analysis and Queries 
 
-select * from customer_data_with_churn;
+SELECT * FROM Customers;
 
-### select specific columns 
-select 
-	CustomerID,
-	Name,
-	Age, 
-	Gender 
-from customer_data_with_churn;
+### 2 Select Specific Columns
+SELECT CustomerID, Name, Income, Segmentation
+FROM Customers;
 
-### filer by segmentation 
-get the customer who belongs to 'high_value' segment 
+### 3. Filter by Segmentation
+Get the customers who belong to the "High-Value" segment.
 
-with segmented as(
-	select 
-	Name,
-case 
-	when Annual_income < 30000 then 'low_value'
-	when Annual_income between 30000 and 60000 then 'mid_value'
-	else 'high_value'
-End as income_segment
-from customer_data_with_churn
-)
-select 
-*
-from segmented 
-where income_segment = 'high_value';
-### group by segmentation 
-find the number of customer in each segmentation group? 
-select 
-case 
-	when Annual_income < 30000 then 'low_value'
-	when Annual_income between 30000 and 60000 then 'mid_value'
-	else 'high_value'
-End as income_segment,
-count(*) as customer_count
-from customer_data_with_churn
-group by 
-case 
-	when Annual_income < 30000 then 'low_value'
-	when Annual_income between 30000 and 60000 then 'mid_value'
-	else 'high_value'
-End
-order by count(*) desc;
+SELECT * FROM Customers
+WHERE Segmentation = 'High-Value';
 
-### find the customer with high income?
+###4. Group by Segmentation
+Find the number of customers in each segmentation group.
 
-select 
-*
-from customer_data_with_churn
-where Annual_income > 75000;
+SELECT Segmentation, COUNT(*) AS CustomerCount
+FROM Customers
+GROUP BY Segmentation;
 
-### find the average_spending score ?
-select 
-avg(Spending_score) as avg_spending 
-from customer_data_with_churn;
+###5. Find Customers with High Income
+Select customers who have an income greater than 75,000
 
-### Ranking the customer by purchase frequency 
-select 
-CustomerID,
-Name,
-Purchase_Frequency,
-DENSE_RANK() over(order by Purchase_Frequency) as customer_rank
-from customer_data_with_churn;
+SELECT * FROM Customers
+WHERE Income > 75000;
 
-find the churn percentage on the basis of membership level ?
+###6.  Order Customers by Recency
+Sort the customers by recency of their last purchase (most recent first).
 
-select 
-Membership_level,
-sum(case when Churn_status = 1 then 1 else 0 End)*100/count(*) as churn_percentage 
-from customer_data_with_churn
-group by Membership_Level
+SELECT * FROM Customers
+ORDER BY Recency DESC;
 
+###7. Find Average Monetary Value
+Calculate the average monetary value spent by customers.
+
+SELECT AVG(Monetary) AS AverageMonetary
+FROM Customers;
+
+###8. Using Case for Income Categories
+Use a CASE statement to categorize customers based on their income.
+
+SELECT CustomerID, Name, Income,
+       CASE
+           WHEN Income > 70000 THEN 'High Income'
+           WHEN Income BETWEEN 40000 AND 70000 THEN 'Medium Income'
+           ELSE 'Low Income'
+       END AS IncomeCategory
+FROM Customers;
+
+###9. Top 3 Customers by Monetary Value
+
+SELECT TOP 3 * FROM Customers
+ORDER BY Monetary DESC;
+
+###9. Segment Customers by Age Range
+ create segments like "Youth," "Adult," and "Senior" based on age ranges.
+
+SELECT CustomerID, Name, Age,
+       CASE
+           WHEN Age < 30 THEN 'Youth'
+           WHEN Age BETWEEN 30 AND 50 THEN 'Adult'
+           ELSE 'Senior'
+       END AS AgeGroup
+FROM Customers;
+
+###10. Analyze Spending Trends by Gender
+Compare average spending based on gender.
+
+SELECT Gender, AVG(Monetary) AS AvgSpending
+FROM Customers
+GROUP BY Gender;
+
+
+## Data Insights
+- The segmentation revealed three distinct customer groups: high spenders, medium spenders, and low spenders. This helps tailor 
+  marketing strategies.
+- Customers with frequent premium item purchases were categorized as high spenders.
+- Recent Purchases: Customers who made recent purchases should be targeted with follow-up offers or loyalty rewards.
+- Sorting customers by recency shows those who are most engaged, allowing targeted follow-ups to retain them.
+- Identifying top spenders allows for the creation of VIP offers and loyalty programs.
 
