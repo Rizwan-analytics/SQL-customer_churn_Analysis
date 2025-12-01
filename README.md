@@ -21,9 +21,3 @@ This dataset consists the following attributes
 
 ## SQL Analysis and Queries 
 
-select 
-CustomerID,
-Name,
-Purchase_Frequency,
-DENSE_RANK() over(order by Purchase_Frequency) as customer_rank
-from customer_data_with_churn;
