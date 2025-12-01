@@ -27,3 +27,4 @@ This dataset consists the following attributes
 * customer_segmentation based on spending_score - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20120015.png
 * top 20 % customer based on spending_score - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20124653.png
 * ranking customer through purchase frequency - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20124054.png
+* churn percentage based on membership_level - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20123057.png
