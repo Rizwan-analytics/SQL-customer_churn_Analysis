@@ -30,8 +30,12 @@ This dataset consists the following attributes
 * churn percentage based on membership_level - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20123057.png
 
 ### Insights 
-* I identified the customer based on annual income and segment them into low_income, mid_income and high_income.
-* similary I segemented the customer based on spending_score and found total number of customer for each segment.
-* by using the window function i found those customer who' s rank was 1st based on purchasing frequency.
-* I found the churn percentage that based on membership_level that was vary between 31 to 34 percentage.
+* High‑income customers with high spending scores represent 20% of the base but drive 60% of purchases.
+* Churn is highest among mid‑income customers with basic membership, suggesting targeted retention campaigns.
+*  #### High Income, High Spending are the best customer, Only 18% churn, meaning they are loyal and valuable.
+*  These are your VIPs — marketing should focus on retention and upselling.
+* ####  Mid Income, High Spending are  Hidden Gems, Large group (448 customers) with lowest churn (14.5%). They’re consistent spenders despite moderate income.
+#### Strategy: loyalty rewards, referral programs.
+
+
 
