@@ -20,4 +20,5 @@ This dataset consists the following attributes
 * churn_status : customer in service or leave the service
 
 ## SQL Analysis and Queries 
-
+customer_segmentation dataset - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/customer_data_with_churn.csv
+SQL Queries - 
