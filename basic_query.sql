@@ -1,0 +1,1 @@
+select * from customer_data_with_churn;
