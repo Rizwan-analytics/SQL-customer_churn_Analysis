@@ -1,10 +1,21 @@
-# SQL-customer_churn_Analysis
-SQL project analyzing customer segmentation and churn using advance techniques like CTEs, window function and business insights.
+# Customer-segmentation analysis 
 
-# problem statement
-business need to identify the customer group and predict churn to improve retention.
+## Overview 
+This project demonstrates customer segmentation using SQL. By analyzing customer behaviors, income, spending patterns, and demographic attributes, uncovered actionable insights to support targeted marketing strategies.
+## Objectives
+* Segment customers based on income, spending frequency, and recency.
+* Identify high-value customer segments for targeted marketing.
+* Ranking customer based on Annual_income and Spending_score
+* identify the churn percentage based on membership_level
 
-# Technique used 
-window function like dense_rank(), Ntile()
-common table expression 
-aggregation function 
+## Dataset
+This dataset consists the following attributes 
+* CustomerID : unique identifier for each customer
+* Name : cusotmer's name
+* Age : customer's age
+* Gender : customer's gender
+* Annual_income : annual_income of customer
+* Spending_score : Spending score of customer
+* Purchase_frequency : how many times did purchase
+* churn_status : customer in service or leave the service 
+
