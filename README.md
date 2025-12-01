@@ -24,3 +24,4 @@ customer_segmentation dataset - https://github.com/Rizwan-analytics/SQL-customer
 SQL Queries - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/basic_query.sql
 ## screenshorts - 
 customer_segmentation based on income - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20114130.png
+customer_segmentation based on spending_score - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20120015.png
