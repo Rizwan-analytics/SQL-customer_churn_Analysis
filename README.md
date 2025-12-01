@@ -21,3 +21,4 @@ This dataset consists the following attributes
 
 ## SQL Analysis and Queries 
 
+Annual_income_segment.sql
