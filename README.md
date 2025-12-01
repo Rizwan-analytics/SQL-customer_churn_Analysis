@@ -22,3 +22,5 @@ This dataset consists the following attributes
 ## SQL Analysis and Queries 
 customer_segmentation dataset - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/customer_data_with_churn.csv
 SQL Queries - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/basic_query.sql
+## screenshorts - 
+customer_segmentation based on income - https://github.com/Rizwan-analytics/SQL-customer_churn_Analysis/blob/main/Screenshot%202025-12-01%20114130.png
